@@ -1,0 +1,27 @@
+$green: #21A937;
+
+@mixin under {
+  background: linear-gradient(transparent 70%, #99E5A5 70%);
+}
+
+@mixin center {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+$tab: 1180px;
+$sp: 767px;
+
+@mixin tab {
+  @media (max-width: ($tab)){
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
